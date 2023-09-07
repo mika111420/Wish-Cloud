@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Christmas' },
+    { name: 'Wedding' },
+    { name: 'Baby Shower' },
+    { name: 'Graduation' },
+    { name: 'Anniversary' }
   ]);
 
   console.log('categories seeded');
@@ -18,111 +18,183 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'MacBook Pro',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+        'A sleek and powerful laptop designed for productivity and creativity.',
       image: 'cookie-tin.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 999.99,
+      quantity: 1
     },
     {
-      name: 'Canned Coffee',
+      name: 'Cold Press Juicer',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
+        'A high-quality juicing machine for nutritious beverages.',
       image: 'canned-coffee.jpg',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 499.99,
+      quantity: 1
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+      name: 'FitBit',
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
+        'A wearable fitness tracker that monitors your physical activity and health.',
+      image: 'canned-coffee.jpg',
+      category: categories[0]._id,
+      price: 99.99,
+      quantity: 1
+    },
+    {
+      name: 'Cookies',
+      description:
+        'Delicious baked treats perfect for satisfying your sweet tooth.',
+      image: 'canned-coffee.jpg',
+      category: categories[0]._id,
+      price: 20.99,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
+      name: 'Rolex',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
+        'A luxury Swiss watch known for its precision and craftsmanship.',
+      image: 'toilet-paper.jpg',
+      price: 5000,
+      quantity: 1
+    },
+    {
+      name: 'Wine Glasses',
+      category: categories[1]._id,
+      description:
+        'Elegant glassware designed to enhance the enjoyment of wine.',
+      image: 'toilet-paper.jpg',
+      price: 80.99,
+      quantity: 4
+    },
+    {
+      name: 'Breadmaker',
+      category: categories[1]._id,
+      description:
+        'A kitchen appliance that automates the process of baking fresh bread.',
       image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+      price: 199.99,
+      quantity: 1
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Kitchen Knives',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
+        'High-quality cutlery essential for precise and efficient food preparation.',
       image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
+      price: 50,
+      quantity: 6
     },
     {
-      name: 'Camera',
+      name: 'Diapers',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Disposable or cloth products for keeping babies dry and comfortable.',
       image: 'camera.jpg',
-      price: 399.99,
+      price: 35,
       quantity: 30
     },
     {
-      name: 'Tablet',
+      name: 'Baby Monitor',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
+        'A device that allows parents to remotely monitor their babys sleep or activity.',
+      image: 'tablet.jpg',
+      price: 75,
+      quantity: 2
+    },
+    {
+      name: 'Car Seat',
+      category: categories[2]._id,
+      description:
+        'A safety seat designed to protect infants during car travel.',
       image: 'tablet.jpg',
       price: 199.99,
-      quantity: 30
+      quantity: 1
     },
     {
-      name: 'Tales at Bedtime',
+      name: 'Crib',
+      category: categories[2]._id,
+      description:
+        'A secure and comfortable bed designed for babies and toddlers.',
+      image: 'tablet.jpg',
+      price: 200,
+      quantity: 1
+    },
+    {
+      name: 'Kindle',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
+        'An e-reader device for accessing a vast library of digital books.',
       image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
+      price: 89.99,
+      quantity: 1
     },
     {
-      name: 'Spinning Top',
+      name: 'Pack of Neck Ties',
+      category: categories[3]._id,
+      description:
+        'A collection of stylish neckties suitable for formal attire.',
+      image: 'bedtime-book.jpg',
+      price: 29.99,
+      quantity: 3
+    },
+    {
+      name: 'Benihana Gift Card',
+      category: categories[3]._id,
+      description:
+        'A gift card for a popular restaurant chain known for teppanyaki-style dining.',
+      image: 'bedtime-book.jpg',
+      price: 150,
+      quantity: 1
+    },
+    {
+      name: 'Notebooks',
+      category: categories[3]._id,
+      description:
+        'Blank or lined books for writing, sketching, or note-taking.',
+      image: 'bedtime-book.jpg',
+      price: 15,
+      quantity: 3
+    },
+    {
+      name: 'Candles',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
+      description: 'Fragrant and decorative items that provide ambiance and pleasant scents.',
       image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
+      price: 25,
+      quantity: 4
     },
     {
-      name: 'Set of Plastic Horses',
+      name: 'Tickets to Japan',
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
+        'Passes for traveling to and exploring the beautiful country of Japan.',
       image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
+      price: 1800,
+      quantity: 2
     },
     {
-      name: 'Teddy Bear',
+      name: 'Tiffany Necklace',
       category: categories[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
+        'A high-quality jewelry piece from the renowned Tiffany & Co. brand.',
       image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
+      price: 350,
+      quantity: 1
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Spa Voucher',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
+        'A voucher for pampering and relaxation at a spa or wellness center.',
       image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+      price: 200,
+      quantity: 1
     }
   ]);
 
