@@ -12,43 +12,20 @@ function ProductList() {
 
   const { currentCategory } = state;
 
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, error, data } = useQuery(QUERY_PRODUCTS);
 
-  useEffect(() => {
-    if (data) {
-      dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products,
-      });
-      data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
-      });
-    } else if (!loading) {
-      idbPromise('products', 'get').then((products) => {
-        dispatch({
-          type: UPDATE_PRODUCTS,
-          products: products,
-        });
-      });
-    }
-  }, [data, loading, dispatch]);
-
-  function filterProducts() {
-    if (!currentCategory) {
-      return state.products;
-    }
-
-    return state.products.filter(
-      (product) => product.category._id === currentCategory
-    );
-  }
+  if (loading) return "Loading...";
+  if (error) {
+    console.log(error);
+    return "Error"
+  };
 
   return (
     <div className="my-2">
       <h2>Our Products:</h2>
-      {state.products.length ? (
+      {data.length ? (
         <div className="flex-row">
-          {filterProducts().map((product) => (
+          {data.map((product) => (
             <ProductItem
               key={product._id}
               _id={product._id}
