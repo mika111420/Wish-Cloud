@@ -22,10 +22,13 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
+            <Link to="/login">
+              {" "}
+              <span role="img" aria-label="cloud">
+                👤
+              </span>
+              My WishCloud
+            </Link>
           </li>
         </ul>
       );

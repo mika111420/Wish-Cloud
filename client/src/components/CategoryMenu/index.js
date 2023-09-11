@@ -39,6 +39,7 @@ function CategoryMenu({ setdisplay }) {
       type: UPDATE_CURRENT_CATEGORY,
       currentCategory: id,
     });
+    setdisplay(true);
   };
 
   return (
