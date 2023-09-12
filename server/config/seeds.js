@@ -67,7 +67,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Elegant glassware designed to enhance the enjoyment of wine.',
-      image: '/assets/wine-glasses.jpg',
+      image: '/assets/wineglass.jpg',
       price: 80.99,
       quantity: 4
     },
@@ -85,9 +85,99 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'High-quality cutlery essential for precise and efficient food preparation.',
-      image: '/assets/kitchen-knives.jpg',
+      image: '/assets/kitchenknives.jpg',
       price: 50,
       quantity: 6
+    },
+    {
+      name: 'KitchenAid Stand Mixer',
+      category: categories[1]._id,
+      description:
+        'A versatile kitchen appliance for baking and cooking enthusiasts.',
+      image: '/assets/kitchenaid.jpg',
+      price: 299.99,
+      quantity: 1
+    },
+    {
+      name: 'Ninja Coffee Maker',
+      category: categories[1]._id,
+      description:
+        'Brew barista-quality coffee at home with ease.',
+      image: '/assets/coffeemaker.jpg',
+      price: 150,
+      quantity: 1
+    },
+    {
+      name: 'Roomba Vacuum',
+      category: categories[1]._id,
+      description:
+        'Make cleaning a breeze with this smart and efficient robot vacuum.',
+      image: '/assets/roomba.jpg',
+      price: 349.99,
+      quantity: 1
+    },
+    {
+      name: 'Samsung 55-inch Smart TV',
+      category: categories[1]._id,
+      description:
+        'Elevate your entertainment experience with stunning 4K visuals.',
+      image: '/assets/samsungtv.jpg',
+      price: 700,
+      quantity: 1
+    },
+    {
+      name: 'Cast Iron Dutch Oven',
+      category: categories[1]._id,
+      description:
+        'A luxury Swiss watch known for its precision and craftsmanship.',
+      image: '/assets/dutchoven.jpg',
+      price: 250,
+      quantity: 1
+    },
+    {
+      name: 'Dyson Supersonic Hair Dryer',
+      category: categories[1]._id,
+      description:
+        'Achieve salon-quality hair drying and styling at home.',
+      image: '/assets/hairdryer.jpg',
+      price: 399.99,
+      quantity: 1
+    },
+    {
+      name: 'Cookware Set',
+      category: categories[1]._id,
+      description:
+        'A comprehensive set of pots and pans for all your culinary needs.',
+      image: '/assets/cookwareset.jpg',
+      price: 210,
+      quantity: 1
+    },
+    {
+      name: 'Apple Watch 7',
+      category: categories[1]._id,
+      description:
+        'Stay connected and track your health and fitness goals in techy style.',
+      image: '/assets/applewatch.jpg',
+      price: 399.99,
+      quantity: 1
+    },
+    {
+      name: 'Serta Memory Foam Mattress',
+      category: categories[1]._id,
+      description:
+        'Ensure a comfortable nights sleep with this luxurious memory foam mattress.',
+      image: '/assets/mattress.jpg',
+      price: 800,
+      quantity: 1
+    },
+    {
+      name: 'Noise Cancelling Headphones',
+      category: categories[1]._id,
+      description:
+        'Immerse yourself in your favorite music or podcasts with superior sound quality.',
+      image: '/assets/headphones.jpg',
+      price: 299.99,
+      quantity: 1
     },
     {
       name: 'Diapers',
@@ -123,6 +213,96 @@ db.once('open', async () => {
         'A secure and comfortable bed designed for babies and toddlers.',
       image: '/assets/crib.jpg',
       price: 200,
+      quantity: 1
+    },
+    {
+      name: 'Cradle n Swing',
+      category: categories[2]._id,
+      description: 'A soothing swing with multiple swing motions and speeds.',
+      image: '/assets/cradleswing.jpg',
+      price: 159.99,
+      quantity: 1
+    },
+    {
+      name: 'Baby Bottle Set',
+      category: categories[2]._id,
+      description: 'A set of baby bottles with anti-colic technology for feeding.',
+      image: '/assets/babybottleset.jpg',
+      price: 29.99,
+      quantity: 4
+    },
+    {
+      name: 'Diaper Bag Backpack',
+      category: categories[2]._id,
+      description: 'A stylish and functional backpack for carrying baby essentials.',
+      image: '/assets/diaperbackpack.jpg',
+      price: 74.99,
+      quantity: 1
+    },
+    {
+      name: 'Muslin Swaddle Blankets',
+      category: categories[2]._id,
+      description: 'Soft and breathable swaddle blankets for newborns.',
+      image: '/assets/swaddleblanket.jpg',
+      price: 44.95,
+      quantity: 4
+    },
+    {
+      name: 'Avent Bottle Warmer',
+      category: categories[2]._id,
+      description: 'A bottle warmer with adjustable settings for precise warming.',
+      image: '/assets/bottlewarmer.jpg',
+      price: 39.99,
+      quantity: 1
+    },
+    {
+      name: '360 Baby Carrier',
+      category: categories[2]._id,
+      description: 'A comfortable and ergonomic baby carrier for on-the-go parents.',
+      image: '/assets/babycarrier.jpg',
+      price: 159.00,
+      quantity: 1
+    },
+    {
+      name: 'Breast Pump',
+      category: categories[2]._id,
+      description: 'A powerful and efficient breast pump for convenient and comfortable pumping.',
+      image: '/assets/pump.jpg',
+      price: 299.99,
+      quantity: 1
+    },
+    {
+      name: 'Bassinet',
+      category: categories[2]._id,
+      description: 'A bassinet cozy and portable, designed to keep them safe and comfortable through the night.',
+      image: '/assets/bassinet.jpg',
+      price: 99.99,
+      quantity: 1
+    },
+    {
+      name: 'Travel Stroller',
+      category: categories[2]._id,
+      description: 'A versatile and stylish stroller that adapts to various terrains and parenting needs.',
+      image: '/assets/stroller.jpg',
+      price: 999.00,
+      quantity: 1
+    },
+    {
+      name: 'Pacifier Set',
+      category: categories[2]._id,
+      description:
+        'Set of comfortable and soothing pacifiers for newborns and infants.',
+      image: '/assets/pacifier.jpg',
+      price: 35,
+      quantity: 1
+    },
+    {
+      name: 'Amber Teething Necklaces',
+      category: categories[2]._id,
+      description:
+        'A holistic soothing amber necklace for teething toddlers.',
+      image: '/assets/teethingnecklace.jpg',
+      price: 35,
       quantity: 1
     },
     {
@@ -183,7 +363,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description:
         'A high-quality jewelry piece from the renowned Tiffany & Co. brand.',
-      image: '/assets/tiffany-necklace',
+      image: '/assets/tiffany-necklace.jpg',
       price: 350,
       quantity: 1
     },
