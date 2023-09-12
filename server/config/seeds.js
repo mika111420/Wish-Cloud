@@ -21,7 +21,7 @@ db.once('open', async () => {
       name: 'MacBook Pro',
       description:
         'A sleek and powerful laptop designed for productivity and creativity.',
-      image: 'cookie-tin.jpg',
+      image: '/assets/macbookpro.jpg',
       category: categories[0]._id,
       price: 999.99,
       quantity: 1
@@ -30,7 +30,7 @@ db.once('open', async () => {
       name: 'Cold Press Juicer',
       description:
         'A high-quality juicing machine for nutritious beverages.',
-      image: 'canned-coffee.jpg',
+      image: '/assets/juicer.jpg',
       category: categories[0]._id,
       price: 499.99,
       quantity: 1
@@ -39,7 +39,7 @@ db.once('open', async () => {
       name: 'FitBit',
       description:
         'A wearable fitness tracker that monitors your physical activity and health.',
-      image: 'canned-coffee.jpg',
+      image: '/assets/fitbit.jpg',
       category: categories[0]._id,
       price: 99.99,
       quantity: 1
@@ -48,7 +48,7 @@ db.once('open', async () => {
       name: 'Cookies',
       description:
         'Delicious baked treats perfect for satisfying your sweet tooth.',
-      image: 'canned-coffee.jpg',
+      image: '/assets/cookies.jpg',
       category: categories[0]._id,
       price: 20.99,
       quantity: 20
@@ -58,7 +58,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'A luxury Swiss watch known for its precision and craftsmanship.',
-      image: 'toilet-paper.jpg',
+      image: '/assets/rolex.jpg',
       price: 5000,
       quantity: 1
     },
@@ -67,7 +67,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Elegant glassware designed to enhance the enjoyment of wine.',
-      image: 'toilet-paper.jpg',
+      image: '/assets/wine-glasses.jpg',
       price: 80.99,
       quantity: 4
     },
@@ -76,7 +76,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'A kitchen appliance that automates the process of baking fresh bread.',
-      image: 'soap.jpg',
+      image: '/assets/breadmaker.jpg',
       price: 199.99,
       quantity: 1
     },
@@ -85,7 +85,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'High-quality cutlery essential for precise and efficient food preparation.',
-      image: 'wooden-spoons.jpg',
+      image: '/assets/kitchen-knives.jpg',
       price: 50,
       quantity: 6
     },
@@ -94,7 +94,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Disposable or cloth products for keeping babies dry and comfortable.',
-      image: 'camera.jpg',
+      image: '/assets/diaper.jpg',
       price: 35,
       quantity: 30
     },
@@ -103,7 +103,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'A device that allows parents to remotely monitor their babys sleep or activity.',
-      image: 'tablet.jpg',
+      image: '/assets/baby-monitor.jpg',
       price: 75,
       quantity: 2
     },
@@ -112,7 +112,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'A safety seat designed to protect infants during car travel.',
-      image: 'tablet.jpg',
+      image: '/assets/car-seat.jpg',
       price: 199.99,
       quantity: 1
     },
@@ -121,7 +121,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'A secure and comfortable bed designed for babies and toddlers.',
-      image: 'tablet.jpg',
+      image: '/assets/crib.jpg',
       price: 200,
       quantity: 1
     },
@@ -130,7 +130,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'An e-reader device for accessing a vast library of digital books.',
-      image: 'bedtime-book.jpg',
+      image: '/assets/kindle.jpg',
       price: 89.99,
       quantity: 1
     },
@@ -139,7 +139,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'A collection of stylish neckties suitable for formal attire.',
-      image: 'bedtime-book.jpg',
+      image: '/assets/neck-ties.jpg',
       price: 29.99,
       quantity: 3
     },
@@ -148,7 +148,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'A gift card for a popular restaurant chain known for teppanyaki-style dining.',
-      image: 'bedtime-book.jpg',
+      image: '/assets/benihana-card.jpg',
       price: 150,
       quantity: 1
     },
@@ -157,7 +157,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         'Blank or lined books for writing, sketching, or note-taking.',
-      image: 'bedtime-book.jpg',
+      image: '/assets/notebooks.jpg',
       price: 15,
       quantity: 3
     },
@@ -165,7 +165,7 @@ db.once('open', async () => {
       name: 'Candles',
       category: categories[4]._id,
       description: 'Fragrant and decorative items that provide ambiance and pleasant scents.',
-      image: 'spinning-top.jpg',
+      image: '/assets/candle.jpg',
       price: 25,
       quantity: 4
     },
@@ -174,7 +174,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description:
         'Passes for traveling to and exploring the beautiful country of Japan.',
-      image: 'plastic-horses.jpg',
+      image: '/assets/japan-tickets.jpg',
       price: 1800,
       quantity: 2
     },
@@ -183,7 +183,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description:
         'A high-quality jewelry piece from the renowned Tiffany & Co. brand.',
-      image: 'teddy-bear.jpg',
+      image: '/assets/tiffany-necklace',
       price: 350,
       quantity: 1
     },
@@ -192,7 +192,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description:
         'A voucher for pampering and relaxation at a spa or wellness center.',
-      image: 'alphabet-blocks.jpg',
+      image: '/assets/spa-voucher.jpg',
       price: 200,
       quantity: 1
     }
