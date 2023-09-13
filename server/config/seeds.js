@@ -440,15 +440,15 @@ db.once('open', async () => {
     {
       name: 'Leather Portfolio',
       description: 'A professional leather portfolio for interviews and meetings.',
-      image: '/assets/portfolio.jpg',
+      image: '/assets/leather-portfolio.jpg',
       category: categories[3]._id,
       price: 79.99,
       quantity: 1
     },
     {
-      name: 'Code Editor License',
+      name: 'Software Editor License',
       description: 'A premium license for a popular code editor or IDE (Integrated Development Environment).',
-      image: '/assets/code-editor.jpg',
+      image: '/assets/software-license.jpg',
       category: categories[3]._id,
       price: 129.99,
       quantity: 1
@@ -486,9 +486,9 @@ db.once('open', async () => {
       quantity: 1
     },
     {
-      name: 'Custom Graduation Photo Frame',
-      description: 'A personalized frame to display a cherished graduation photo.',
-      image: '/assets/photo-frame.jpg',
+      name: 'Custom Graduation Diploma Frame',
+      description: 'A personalized frame to display a diploma',
+      image: '/assets/diploma-frame.jpg',
       category: categories[3]._id,
       price: 29.99,
       quantity: 1
@@ -496,7 +496,7 @@ db.once('open', async () => {
       {
         name: 'Gift Card for Coding Courses',
         description: 'Access to a wide range of online coding courses to enhance skills and knowledge.',
-        image: '/assets/online-courses.jpg',
+        image: '/assets/online-course.jpg',
         category: categories[3]._id,
         price: 100,
         quantity: 1
@@ -579,7 +579,7 @@ db.once('open', async () => {
     {
       name: 'Wine Tasting Experience',
       description: 'An exclusive wine tasting tour at a local vineyard.',
-      image: '/assets/wine_tasting.jpg',
+      image: '/assets/wine-tasting.jpg',
       category: categories[4]._id,
       price: 149.99,
       quantity: 1
@@ -587,7 +587,7 @@ db.once('open', async () => {
     {
       name: 'Personalized Anniversary Photo Album',
       description: 'A custom-made photo album to cherish your special memories.',
-      image: '/assets/photo_album.jpg',
+      image: '/assets/photo-album.jpg',
       category: categories[4]._id,
       price: 49.99,
       quantity: 1
@@ -635,8 +635,8 @@ db.once('open', async () => {
     {
       name: 'Vinyl Record Collection',
       description: 'A curated collection of vintage and contemporary vinyl records spanning various genres.',
-      image: '/assets/vinyl_records.jpg',
-      category: categories[1]._id,
+      image: '/assets/vinyl-records.jpg',
+      category: categories[4]._id,
       price: 299.99,
       quantity: 1
     }
