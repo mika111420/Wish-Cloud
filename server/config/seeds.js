@@ -54,6 +54,94 @@ db.once('open', async () => {
       quantity: 20
     },
     {
+      name: 'Gourmet Chocolate Gift Box',
+      description: 'A selection of exquisite chocolates for a sweet holiday treat.',
+      image: '/assets/chocolates.jpg',
+      category: categories[0]._id,
+      price: 39.99,
+      quantity: 1
+    },
+    {
+      name: 'Festive Holiday Pajama Set',
+      description: 'Cozy and stylish pajamas for lounging on Christmas morning.',
+      image: '/assets/pajamas.jpg',
+      category: categories[0]._id,
+      price: 59.99,
+      quantity: 1
+    },
+    {
+      name: 'Personalized Photo Album',
+      description: 'A custom photo album to cherish holiday memories.',
+      image: '/assets/photo-album.jpg',
+      category: categories[0]._id,
+      price: 29.99,
+      quantity: 1
+    },
+    {
+      name: 'Smart Home Starter Kit',
+      description: 'A kit to turn any home into a smart, connected space.',
+      image: '/assets/smart-home.jpg',
+      category: categories[0]._id,
+      price: 299.99,
+      quantity: 1
+    },
+    {
+      name: 'Holiday Scented Candle Set',
+      description: 'A set of festive scented candles to create a warm holiday atmosphere.',
+      image: '/assets/candles.jpg',
+      category: categories[0]._id,
+      price: 49.99,
+      quantity: 1
+    },
+    {
+      name: 'Portable Bluetooth Speaker',
+      description: 'A compact speaker for enjoying music on-the-go.',
+      image: '/assets/speaker.jpg',
+      category: categories[0]._id,
+      price: 79.99,
+      quantity: 1
+    },
+    {
+      name: 'Handcrafted Christmas Ornaments',
+      description: 'Beautiful, hand-painted Christmas ornaments to adorn the tree.',
+      image: '/assets/ornaments.jpg',
+      category: categories[0]._id,
+      price: 19.99,
+      quantity: 6
+    },
+    {
+      name: 'Bluetooth Wireless Earbuds',
+      description: 'Premium wireless earbuds for crystal-clear audio and hands-free calls.',
+      image: '/assets/earbuds.jpg',
+      category: categories[0]._id,
+      price: 129.99,
+      quantity: 1
+    },    
+    {
+      name: 'Artisanal Tea Collection',
+      description: 'A curated collection of premium teas for tea lovers.',
+      image: '/assets/tea-collection.jpg',
+      category: categories[0]._id,
+      price: 34.99,
+      quantity: 1
+    },
+    {
+      name: 'Outdoor Adventure Backpack',
+      description: 'A durable and versatile backpack for outdoor enthusiasts.',
+      image: '/assets/backpack.jpg',
+      category: categories[0]._id,
+      price: 179.99,
+      quantity: 1
+    },
+    {
+      name: 'Artisanal Cheese and Wine Basket',
+      description: 'A curated selection of fine cheeses and wine.',
+      image: '/assets/cheese_wine.jpg',
+      category: categories[0]._id,
+      price: 89.99,
+      quantity: 1
+    },
+    {
       name: 'Rolex',
       category: categories[1]._id,
       description:
