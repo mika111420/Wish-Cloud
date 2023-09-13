@@ -496,7 +496,7 @@ db.once('open', async () => {
       {
         name: 'Gift Card for Coding Courses',
         description: 'Access to a wide range of online coding courses to enhance skills and knowledge.',
-        image: '/assets/online-courses.jpg',
+        image: '/assets/online-course.jpg',
         category: categories[3]._id,
         price: 100,
         quantity: 1
@@ -579,7 +579,7 @@ db.once('open', async () => {
     {
       name: 'Wine Tasting Experience',
       description: 'An exclusive wine tasting tour at a local vineyard.',
-      image: '/assets/wine_tasting.jpg',
+      image: '/assets/wine-tasting.jpg',
       category: categories[4]._id,
       price: 149.99,
       quantity: 1
@@ -587,7 +587,7 @@ db.once('open', async () => {
     {
       name: 'Personalized Anniversary Photo Album',
       description: 'A custom-made photo album to cherish your special memories.',
-      image: '/assets/photo_album.jpg',
+      image: '/assets/photo-album.jpg',
       category: categories[4]._id,
       price: 49.99,
       quantity: 1
@@ -635,8 +635,8 @@ db.once('open', async () => {
     {
       name: 'Vinyl Record Collection',
       description: 'A curated collection of vintage and contemporary vinyl records spanning various genres.',
-      image: '/assets/vinyl_records.jpg',
-      category: categories[1]._id,
+      image: '/assets/vinyl-records.jpg',
+      category: categories[4]._id,
       price: 299.99,
       quantity: 1
     }
