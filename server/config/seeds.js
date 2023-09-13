@@ -440,15 +440,15 @@ db.once('open', async () => {
     {
       name: 'Leather Portfolio',
       description: 'A professional leather portfolio for interviews and meetings.',
-      image: '/assets/portfolio.jpg',
+      image: '/assets/leather-portfolio.jpg',
       category: categories[3]._id,
       price: 79.99,
       quantity: 1
     },
     {
-      name: 'Code Editor License',
+      name: 'Software Editor License',
       description: 'A premium license for a popular code editor or IDE (Integrated Development Environment).',
-      image: '/assets/code-editor.jpg',
+      image: '/assets/software-license.jpg',
       category: categories[3]._id,
       price: 129.99,
       quantity: 1
@@ -486,9 +486,9 @@ db.once('open', async () => {
       quantity: 1
     },
     {
-      name: 'Custom Graduation Photo Frame',
-      description: 'A personalized frame to display a cherished graduation photo.',
-      image: '/assets/photo-frame.jpg',
+      name: 'Custom Graduation Diploma Frame',
+      description: 'A personalized frame to display a diploma',
+      image: '/assets/diploma-frame.jpg',
       category: categories[3]._id,
       price: 29.99,
       quantity: 1
