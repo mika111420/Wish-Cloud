@@ -88,7 +88,7 @@ db.once('open', async () => {
     {
       name: 'Holiday Scented Candle Set',
       description: 'A set of festive scented candles to create a warm holiday atmosphere.',
-      image: '/assets/candles.jpg',
+      image: '/assets/holiday-candles.jpg',
       category: categories[0]._id,
       price: 49.99,
       quantity: 1
@@ -128,7 +128,7 @@ db.once('open', async () => {
     {
       name: 'Outdoor Adventure Backpack',
       description: 'A durable and versatile backpack for outdoor enthusiasts.',
-      image: '/assets/backpack.jpg',
+      image: '/assets/outdoor-backpack.jpg',
       category: categories[0]._id,
       price: 179.99,
       quantity: 1
@@ -136,7 +136,7 @@ db.once('open', async () => {
     {
       name: 'Artisanal Cheese and Wine Basket',
       description: 'A curated selection of fine cheeses and wine.',
-      image: '/assets/cheese_wine.jpg',
+      image: '/assets/cheese-wine.jpg',
       category: categories[0]._id,
       price: 89.99,
       quantity: 1
@@ -550,6 +550,94 @@ db.once('open', async () => {
         'A voucher for pampering and relaxation at a spa or wellness center.',
       image: '/assets/spa-voucher.jpg',
       price: 200,
+      quantity: 1
+    },
+    {
+      name: 'His and Hers Watches',
+      description: 'A pair of matching watches to symbolize your time together.',
+      image: '/assets/watches.jpg',
+      category: categories[4]._id,
+      price: 599.99,
+      quantity: 2
+    },
+    {
+      name: 'Customized Anniversary Artwork',
+      description: 'A personalized piece of artwork to commemorate your love story.',
+      image: '/assets/artwork.jpg',
+      category: categories[4]._id,
+      price: 199.99,
+      quantity: 1
+    },
+    {
+      name: 'Luxury Bedding Set',
+      description: 'A high-quality bedding set for a comfortable and cozy nights sleep.',
+      image: '/assets/bedding.jpg',
+      category: categories[4]._id,
+      price: 179.99,
+      quantity: 1
+    },
+    {
+      name: 'Wine Tasting Experience',
+      description: 'An exclusive wine tasting tour at a local vineyard.',
+      image: '/assets/wine_tasting.jpg',
+      category: categories[4]._id,
+      price: 149.99,
+      quantity: 1
+    },
+    {
+      name: 'Personalized Anniversary Photo Album',
+      description: 'A custom-made photo album to cherish your special memories.',
+      image: '/assets/photo_album.jpg',
+      category: categories[4]._id,
+      price: 49.99,
+      quantity: 1
+    },    
+    {
+      name: 'Diamond Stud Earrings',
+      description: 'Classic and elegant diamond stud earrings to mark the occasion.',
+      image: '/assets/earrings.jpg',
+      category: categories[4]._id,
+      price: 999.99,
+      quantity: 1
+    },
+    {
+      name: 'Romantic Picnic Basket',
+      description: 'A picnic basket filled with gourmet treats for a romantic day outdoors.',
+      image: '/assets/picnic.jpg',
+      category: categories[4]._id,
+      price: 99.99,
+      quantity: 1
+    },
+    {
+      name: 'Engraved Anniversary Wine Glasses',
+      description: 'Elegant wine glasses with personalized engraving for toasting to your love.',
+      image: '/assets/engravedwine.jpg',
+      category: categories[4]._id,
+      price: 59.99,
+      quantity: 2
+    },
+    {
+      name: 'Hot Air Balloon Ride for Two',
+      description: 'Soar above the landscape in a romantic hot air balloon adventure.',
+      image: '/assets/balloon.jpg',
+      category: categories[4]._id,
+      price: 299.99,
+      quantity: 2
+    },
+    {
+      name: 'Concert Tickets for Santana',
+      description: 'Local venue tickets for the musical legend Santana & band.',
+      image: '/assets/santana.jpg',
+      category: categories[4]._id,
+      price: 299.99,
+      quantity: 2
+    },
+    {
+      name: 'Vinyl Record Collection',
+      description: 'A curated collection of vintage and contemporary vinyl records spanning various genres.',
+      image: '/assets/vinyl_records.jpg',
+      category: categories[1]._id,
+      price: 299.99,
       quantity: 1
     }
   ]);
