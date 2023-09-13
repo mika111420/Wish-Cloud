@@ -430,6 +430,94 @@ db.once('open', async () => {
       quantity: 3
     },
     {
+      name: 'Smartwatch',
+      description: 'A versatile smartwatch for staying connected and tracking fitness.',
+      image: '/assets/smartwatch.jpg',
+      category: categories[3]._id,
+      price: 199.99,
+      quantity: 1
+    },
+    {
+      name: 'Leather Portfolio',
+      description: 'A professional leather portfolio for interviews and meetings.',
+      image: '/assets/portfolio.jpg',
+      category: categories[3]._id,
+      price: 79.99,
+      quantity: 1
+    },
+    {
+      name: 'Code Editor License',
+      description: 'A premium license for a popular code editor or IDE (Integrated Development Environment).',
+      image: '/assets/code-editor.jpg',
+      category: categories[3]._id,
+      price: 129.99,
+      quantity: 1
+    },
+    {
+      name: 'Portable Power Bank',
+      description: 'A compact and powerful portable charger to keep devices charged while on the go.',
+      image: '/assets/powerbank.jpg',
+      category: categories[3]._id,
+      price: 39.99,
+      quantity: 1
+    },
+    {
+      name: 'Noise-Canceling Headphones',
+      description: 'High-quality headphones with active noise cancellation for a peaceful and immersive travel experience.',
+      image: '/assets/noiseheadphones.jpg',
+      category: categories[3]._id,
+      price: 199.99,
+      quantity: 1
+    },    
+    {
+      name: 'Professional Camera',
+      description: 'A high-quality camera for capturing memories and creativity.',
+      image: '/assets/camera.jpg',
+      category: categories[3]._id,
+      price: 799.99,
+      quantity: 1
+    },
+    {
+      name: 'Amazon Gift Card',
+      description: 'A versatile gift card for shopping on Amazon.',
+      image: '/assets/gift-card.jpg',
+      category: categories[3]._id,
+      price: 50.00,
+      quantity: 1
+    },
+    {
+      name: 'Custom Graduation Photo Frame',
+      description: 'A personalized frame to display a cherished graduation photo.',
+      image: '/assets/photo-frame.jpg',
+      category: categories[3]._id,
+      price: 29.99,
+      quantity: 1
+      },
+      {
+        name: 'Gift Card for Coding Courses',
+        description: 'Access to a wide range of online coding courses to enhance skills and knowledge.',
+        image: '/assets/online-courses.jpg',
+        category: categories[3]._id,
+        price: 100,
+        quantity: 1
+        },
+        {
+          name: 'Professional Laptop Bag',
+          description: 'A stylish and functional laptop bag for work or travel.',
+          image: '/assets/laptop-bag.jpg',
+          category: categories[3]._id,
+          price: 79.99,
+          quantity: 1
+          },
+          {
+            name: 'Gourmet Spice Collection',
+            description: 'An assortment of premium spices and seasonings to enhance their culinary creations.',
+            image: '/assets/spice-collection.jpg',
+            category: categories[3]._id,
+            price: 49.99,
+            quantity: 1
+            },
+    {
       name: 'Candles',
       category: categories[4]._id,
       description: 'Fragrant and decorative items that provide ambiance and pleasant scents.',
