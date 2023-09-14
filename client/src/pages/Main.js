@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
+import Cart from "../components/Cart/index.js";
 
 const Main = () => {
   const [display, setdisplay] = useState(false);

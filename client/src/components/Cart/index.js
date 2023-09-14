@@ -8,15 +8,15 @@ import Auth from "../../utils/auth";
 import { useStoreContext } from "../../utils/GlobalState";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
-import { Link } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import ParentComponent from './ParentComponent';
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
   // We check to see if there is a data object that exists, if so this means that a checkout session was returned from the backend
   // Then we should redirect to the checkout with a reference to our session id
   useEffect(() => {
@@ -55,13 +55,15 @@ const Cart = () => {
   // When the submit checkout method is invoked, loop through each item in the cart
   // Add each item id to the productIds array and then invoke the getCheckout query passing an object containing the id for all our products
   function submitCheckout() {
-    getCheckout({
-      variables: {
-        products: [...state.cart],
-      },
-    });
+    //console.log("state cart is ");
+    var my_arr = [...state.cart];
+    window.myArray = my_arr;
+    console.log("i'm a global");
+    console.log(window.myArray);
+    ReactDOM.render(<ParentComponent />);
   }
 
+  
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
@@ -89,9 +91,7 @@ const Cart = () => {
 
             {/* Check to see if the user is logged in. If so render a button to check out */}
             {Auth.loggedIn() ? (
-              <Link to="/orderhistory">
-                <button>Share Wishlist</button>
-              </Link>
+              <button onClick={submitCheckout}>Share Wishlist</button>
             ) : (
               <span>(log in to check out)</span>
             )}
