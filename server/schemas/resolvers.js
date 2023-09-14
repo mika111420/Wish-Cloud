@@ -1,7 +1,7 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Product, Category, Wishlist } = require("../models");
 const { signToken } = require("../utils/auth");
-// const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
+const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
 const resolvers = {
   Query: {
@@ -29,11 +29,11 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: "wishlists.products",
+          path: "wishlist.products",
           populate: "category",
         });
 
-        user.wishlists.sort((a, b) => b.purchaseDate - a.purchaseDate);
+        user.wishlist.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
         return user;
       }
@@ -43,11 +43,11 @@ const resolvers = {
     wishlist: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: "wishlists.products",
+          path: "wishlist.product",
           populate: "category",
         });
 
-        return user.wishlists.id(_id);
+        return user.wishlist.id(_id);
       }
 
       throw new AuthenticationError("Not logged in");
@@ -59,30 +59,30 @@ const resolvers = {
       const line_items = [];
 
       // eslint-disable-next-line no-restricted-syntax
-      // for (const product of args.products) {
-      //   line_items.push({
-      //     price_data: {
-      //       currency: "usd",
-      //       product_data: {
-      //         name: product.name,
-      //         description: product.description,
-      //         images: [`${url}/images/${product.image}`],
-      //       },
-      //       unit_amount: product.price * 100,
-      //     },
-      //     quantity: product.purchaseQuantity,
-      //   });
-      // }
+      for (const product of args.products) {
+        line_items.push({
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: product.name,
+              description: product.description,
+              images: [`${url}/images/${product.image}`],
+            },
+            unit_amount: product.price * 100,
+          },
+          quantity: product.purchaseQuantity,
+        });
+      }
 
-      // const session = await stripe.checkout.sessions.create({
-      //   payment_method_types: ["card"],
-      //   line_items,
-      //   mode: "payment",
-      //   success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-      //   cancel_url: `${url}/`,
-      // });
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items,
+        mode: "payment",
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`,
+      });
 
-      // return { session: session.id };
+      return { session: session.id };
     },
   },
   Mutation: {
@@ -98,7 +98,7 @@ const resolvers = {
         const wishlist = new Wishlist({ products });
 
         await User.findByIdAndUpdate(context.user._id, {
-          $push: { wishlists: wishlist },
+          $push: { wishlist: wishlist },
         });
 
         return wishlist;

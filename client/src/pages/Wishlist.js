@@ -22,7 +22,7 @@ function Wishlist() {
             <h2>
               Wishlist for {user.firstName} {user.lastName}
             </h2>
-            {user.wishlists.map((wishlist) => (
+            {user.wishlist.map((wishlist) => (
               <div key={wishlist._id} className="my-2">
                 <h3>
                   {new Date(
