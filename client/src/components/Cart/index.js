@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { loadStripe } from "@stripe/stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
@@ -11,7 +11,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+// const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -89,11 +89,11 @@ const Cart = () => {
 
             {/* Check to see if the user is logged in. If so render a button to check out */}
             {Auth.loggedIn() ? (
-              <Link to="/orderhistory">
+              <Link to="/success">
                 <button>Save WishCloud</button>
               </Link>
             ) : (
-              <span>(log in to check out)</span>
+              <span>(log in to save your wishlist)</span>
             )}
           </div>
         </div>
