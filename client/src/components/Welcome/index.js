@@ -1,41 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import 'tailwindcss/tailwind.css';
+
 
 function Welcome() {
+
+  const navigate = useNavigate();
+
+  const navigateToSignup = () => {
+    navigate('/signup');
+  };
+
   return (
     <div>
-      <h1>"Dream Big, Create a Wishlist, Make Memories..."</h1>
-      <p>
-        Embrace the magic of special occasions by creating a wishlist. It's the
-        first step towards turning your dreams into reality.
-      </p>
-      <Link to="/Signup">
-        <button>🎁 Create WishCloud 🎁</button>
-      </Link>
       <div>
-        <h2>Fast and cost-free </h2>
-        <p>
-          WishCloud allows you to swiftly create your wishlist at no cost and
-          easier than ever!
-        </p>
-      </div>
-      <div>
-        <h2> For every event </h2>
-        <p>Design your wishlist to suit any occasion of your choosing.</p>
-      </div>
-      <div>
-        <h2> With one click</h2>
-        <p>
-          With the WishCloud button you can add gift items to your wish list
-          with just one click.
-        </p>
-      </div>
-      <div>
-        <h2> Share easily</h2>
-        <p>
-          Share your wish list with family and friends via e-mail, messenger or
-          social media.
-        </p>
+        <div className='max-w-[1640px] mx-auto p-4'>
+        <div className='max-h-[500px] relative'>
+          <div className='absolute w-full h-full text-white max-h-[500px] flex flex-col justify-center'>
+            <h1 className='px-4 text-4xl sm:text-5xl md:text-6cl lg:7xl font-bold'>Dream Big. Create Wishlists. Make Memories.</h1>
+          </div>
+          <img className='w-full max-h-[400px] object-cover' src="./assets/cloud-welcome.jpg" />
+        </div>
+        </div>
+        <div className='flex justify-center items-center'>
+          <button className='border-blue-500 border-solid border rounded-xl px-10 py-4 my-2 flex items-center font-bold hover:bg-blue-200 hover:border-blue-200' onClick={navigateToSignup}>Start Wishing!</button>
+        </div>
       </div>
     </div>
   );
