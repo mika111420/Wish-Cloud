@@ -7,7 +7,8 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-
+import './index.css';
+import 'tailwindcss/tailwind.css';
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -15,6 +16,7 @@ import Login from "./pages/Login";
 import Main from "./pages/Main";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
+import WelcomeCards from "./components/WelcomeCards"
 import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 import Wishlist from "./pages/Wishlist";
