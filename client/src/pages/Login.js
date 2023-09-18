@@ -18,6 +18,7 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
+      window.location.replace("/main");
     } catch (e) {
       console.log(e);
     }

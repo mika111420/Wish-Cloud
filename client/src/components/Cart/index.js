@@ -8,7 +8,6 @@ import Auth from "../../utils/auth";
 import { useStoreContext } from "../../utils/GlobalState";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
-import { Link } from "react-router-dom";
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
@@ -77,7 +76,7 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         [✖️]
       </div>
-      <h2>Shopping Cart</h2>
+      <h2>WishCloud</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -89,11 +88,9 @@ const Cart = () => {
 
             {/* Check to see if the user is logged in. If so render a button to check out */}
             {Auth.loggedIn() ? (
-              <Link to="/orderhistory">
-                <button>Share Wishlist</button>
-              </Link>
+              <button onClick={submitCheckout}>Save WishCloud</button>
             ) : (
-              <span>(log in to check out)</span>
+              <span>(log in to save your wishlist)</span>
             )}
           </div>
         </div>
@@ -102,7 +99,7 @@ const Cart = () => {
           <span role="img" aria-label="shocked">
             😱
           </span>
-          You haven't added anything to your cart yet!
+          You haven't added anything to your WishCloud yet!
         </h3>
       )}
     </div>
