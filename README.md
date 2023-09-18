@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Wish-Cloud☁️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Your personal wishlist haven for life's most cherished moments. With WishCloud, you can effortlessly create, save, and share wishlists for your most important celebrations. Whether it's a birthday, anniversary, or holiday season, Wiscloud makes gift-giving a breeze. Simply curate your dream wishlist, save your favorite items, and easily share them with friends and family. No more guessing games or unwanted gifts. Make your celebrations extra special with Wiscloud - where wishes come true, one click at a time.
 
-In the project directory, you can run:
+## Achievements
 
-### `npm start`
+-Created a responsive website using React for the front end and GraphQL with Node.js and Express.js server.
+-Used MongoDB and Mongoose for the DataBase.
+-Used queries mutations for retrieving, adding, updating and deleting data.
+-Used a polish UI (Tailwind).
+-Made it interactive.
+-Included Authentication.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Final Product
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+😄 Please see below a quick view of the website 😄 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![screencapture-localhost-3000-2023-09-17-20_38_30](https://github.com/mika111420/Wish-Cloud/assets/128196586/107a7c65-d46a-43ea-9a4f-19c7cf7012ee)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- This is the link for the webpage to view on more detail: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Credits 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Awesome documents used for better understanding to develop the project,
 
-### `npm run eject`
+- https://www.w3schools.com
+- https://graphql.org/
+- https://tailwindcss.com/
+- https://project-management.com/top-10-project-management-software-lp/?utm_source=google&utm_medium=cpc&utm_term=project%20management%20software&utm_content=c&network=g_T1&utm_campaign=9311529034&gclid=Cj0KCQjwwvilBhCFARIsADvYi7JcApynQNv4tNLMyAUIGUrx5QLZUWcWtoX947kEJ42AO7TyDYsETWMaAh2GEALw_wcB
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ✔️ ✔️ ✔️
