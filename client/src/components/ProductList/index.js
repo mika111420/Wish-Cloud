@@ -15,6 +15,8 @@ function ProductList({ display }) {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
+  
+
   useEffect(() => {
     if (data) {
       dispatch({
@@ -44,29 +46,38 @@ function ProductList({ display }) {
     );
   }
 
-  return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
-      {state.products.length ? (
-        <div className="flex-row">
-          {display &&
-            filterProducts().map((product) => (
-              <ProductItem
-                key={product._id}
-                _id={product._id}
-                image={product.image}
-                name={product.name}
-                price={product.price}
-                quantity={product.quantity}
-              />
-            ))}
-        </div>
-      ) : (
-        <h3>You haven't added any products yet!</h3>
-      )}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+return (
+<div className="my-2">
+  <h2 className="text-2xl font-semibold mb-4">Our Products:</h2>
+  {state.products.length ? (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {display &&
+        filterProducts().map((product) => (
+          // <div key={product._id} className="bg-white rounded-lg p-4 shadow-md">
+          //   <img
+          //     src={product.image}
+          //     alt={product.name}
+          //     className="w-full h-40 object-cover rounded-t-lg"
+          //   />
+          //   <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
+          //   <p className="text-gray-700 text-sm mt-1">Price: ${product.price}</p>
+          //   <p className="text-gray-700 text-sm">Quantity: {product.quantity}</p>
+          //   <button
+          //         className="bg-blue-500 text-white rounded-full px-4 py-2 mt-2 font-semibold hover:bg-blue-600"
+          //         onClick={() => addToCart(product)} 
+          //       >
+          //         Add to Cart
+          //       </button>
+          // </div>
+          <ProductItem item={product}/>
+        ))}
     </div>
-  );
-}
+  ) : (
+    <h3 className="text-lg font-semibold">You haven't added any products yet!</h3>
+  )}
+  {loading && <img src={spinner} alt="loading" className="mt-4" />}
+</div>
+);
+  }
 
 export default ProductList;
