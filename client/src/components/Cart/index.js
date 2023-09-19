@@ -30,7 +30,7 @@ const Cart = () => {
   // If so, invoke the getCart method and populate the cart with the existing from the session
   useEffect(() => {
     async function getCart() {
-      const cart = await idbPromise("cart", "get");
+      let cart = await idbPromise("cart", "get")
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
 
@@ -54,9 +54,17 @@ const Cart = () => {
   // When the submit checkout method is invoked, loop through each item in the cart
   // Add each item id to the productIds array and then invoke the getCheckout query passing an object containing the id for all our products
   function submitCheckout() {
+    debugger
     getCheckout({
       variables: {
-        products: [...state.cart],
+        products: [...state.cart.map(product =>({
+          _id: product._id,
+          purchaseQuantity: product.purchaseQuantity,
+          name: product.name,
+          image: product.image,
+          price: product.price,
+          quantity: product.quantity
+        }))],
       },
     });
   }
