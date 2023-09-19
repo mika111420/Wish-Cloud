@@ -21,7 +21,9 @@ const resolvers = {
         };
       }
 
-      return await Product.find(params).populate("category");
+      const products= await Product.find(params).populate("category");
+      console.log(products);
+      return products.map(product => product.toObject())
     },
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
