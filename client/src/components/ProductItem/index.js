@@ -5,17 +5,10 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
-
-function ProductItem({item}) {
+function ProductItem({ item }) {
   const [state, dispatch] = useStoreContext();
-console.log(item)
-  const {
-    image,
-    name,
-    _id,
-    price,
-    quantity
-  } = item;
+  console.log(item);
+  const { image, name, _id, price, quantity } = item;
 
   const { cart } = state;
 
@@ -46,13 +39,19 @@ console.log(item)
         <img
           alt={name}
           src={`${image}`}
-          className="w-full h-40 object-cover rounded-t-lg"/>
+          className="w-full h-40 object-cover rounded-t-lg"
+        />
         <h3 className="text-lg font-semibold mt-2">{name}</h3>
         <p className="text-gray-700 text-sm mt-1">Price: ${price}</p>
         <p className="text-gray-700 text-sm">Quantity: {quantity}</p>
       </Link>
-      
-      <button onClick={addToCart} className="bg-blue-500 text-white rounded-full px-4 py-2 mt-2 font-semibold hover:bg-blue-600">Add to cart</button>
+
+      <button
+        onClick={addToCart}
+        className="bg-blue-500 text-white rounded-full px-4 py-2 mt-2 font-semibold hover:bg-blue-600"
+      >
+        Add to the Cloud
+      </button>
     </div>
   );
 }
